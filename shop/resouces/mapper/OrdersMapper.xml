@@ -154,7 +154,10 @@
 		oid, total, ordertime, state, name, phone, addr, uid
 	</sql>
 	
-	
+	<!-- 
+		主键主动增长
+		        通常使用在增加后返回自增长的主键的值,赋值到相应的属性上
+	-->
 	<!-- int add(Orders order); -->
 	<insert id="add" useGeneratedKeys="true" keyProperty="oid" keyColumn="oid">
 		insert into orders (
